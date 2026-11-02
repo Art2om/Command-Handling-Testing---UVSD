@@ -1,0 +1,74 @@
+#settings
+.settings/
+
+#metadata
+.metadata/
+
+#Debug
+Debug/
+debug/
+Release/
+release
+*.launch
+
+# Prerequisites
+*.d
+
+# Object files
+*.o
+*.ko
+*.obj
+*.elf
+
+# Linker output
+*.ilk
+*.map
+*.exp
+
+# Libraries
+*.lib
+*.a
+*.la
+*.lo
+
+# Shared objects
+*.dll
+*.so
+*.so.*
+*.dylib
+
+# Executables
+*.exe
+*.out
+*.app
+*.i*86
+*.x86_64
+*.hex
+*.bin
+
+# Debug files
+*.dSYM/
+*.su
+*.idb
+*.pdb
+
+# Generated code
+Middlewares/
+Drivers/
+EWARM/
+.mxproject
+*.ld
+
+# Miscellaneous
+.DS_Store
+
+# CI stand-ins for generated files (copied into place by ci/firmware/fetch_cube_deps.sh)
+!ci/firmware/FATFS/
+!ci/firmware/*.ld
+ci/firmware/build/
+hil-logs/
+
+# Unit test build output and coverage data
+tests/build/
+*.gcno
+*.gcda
