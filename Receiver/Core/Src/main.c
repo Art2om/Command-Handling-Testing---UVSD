@@ -23,7 +23,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "command_handler.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -348,6 +348,7 @@ void StartDefaultTask(void *argument)
 void StartCommandHandling(void *argument)
 {
   /* USER CODE BEGIN StartCommandHandling */
+	begin_command_handling(&huart7);
   /* Infinite loop */
   for(;;)
   {
