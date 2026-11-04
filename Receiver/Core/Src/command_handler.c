@@ -1,8 +1,8 @@
 /*
  * command_handler.c
  *
- *  Created on: 2, November, 2026.
- *  Author: Artyom Svetlichnyy
+ * Created on: 2, November, 2026.
+ * Author: Artyom Svetlichnyy
  */
 
 #include "command_handler.h"
@@ -61,7 +61,7 @@ void command_handle(void){
 }
 
 /*
- * @brief: User implementation of UART error callback.
+ * @brief: User implementation of HAL UART error callback.
  * @note: Refer to the declaration of the function within HAL drivers.
  */
 void HAL_UART_ErrorCallback(UART_HandleTypeDef *huart){

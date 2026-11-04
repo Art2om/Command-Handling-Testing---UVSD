@@ -1,8 +1,8 @@
 /*
  * command_handler.h
  *
- *  Created on: 2, November, 2026
- *  Author: Artyom Svetlichnyy
+ * Created on: 2, November, 2026
+ * Author: Artyom Svetlichnyy
  */
 
 #ifndef INC_COMMAND_HANDLER_H_
