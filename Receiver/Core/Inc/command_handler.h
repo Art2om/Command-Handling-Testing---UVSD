@@ -8,8 +8,11 @@
 #ifndef INC_COMMAND_HANDLER_H_
 #define INC_COMMAND_HANDLER_H_
 
+// SIMPLIFICATION: All commands have an idle pause in between.
+// CURRENT PROBLEM: What happens if the command processing task gets blocked by higher priority tasks?
+
 #include <stdint.h>
-#include "main.h"	// There is probably a smaller header to include.
+#include "stm32h7xx_hal.h"
 
 /*
  * @brief: Sets the UART peripheral to listen for commands, serving as an abstraction layer.
@@ -18,14 +21,8 @@
 void begin_command_handling(UART_HandleTypeDef* huart);
 
 /*
- * @brief: User implementation of HAL driver function.
- * @note: Refer to the declaration of the function within HAL drivers.
+ * @brief: The command parsing and interpretation function.
  */
-void HAL_UARTEx_RxEventCallback(UART_HandleTypeDef *huart, uint16_t Size);
-
-/*
- * @brief: The command parsing and
- */
-void command_handle(const uint8_t* command);
+void command_handle(void);
 
 #endif /* INC_COMMAND_HANDLER_H_ */

@@ -352,7 +352,7 @@ void StartCommandHandling(void *argument)
   /* Infinite loop */
   for(;;)
   {
-    osDelay(1);
+	  command_handle();
   }
   /* USER CODE END StartCommandHandling */
 }
