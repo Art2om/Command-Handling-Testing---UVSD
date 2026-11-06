@@ -70,6 +70,7 @@ int main(void)
 
   /* USER CODE BEGIN 1 */
 	const uint8_t command_example[] = {3, 6, 36};
+	HAL_StatusTypeDef transmission_result;
   /* USER CODE END 1 */
 
   /* MPU Configuration--------------------------------------------------------*/
@@ -105,8 +106,20 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-	  HAL_UART_Transmit(&huart7, command_example,
+	  transmission_result = HAL_UART_Transmit(&huart7, command_example,
 	  			  sizeof(command_example) / sizeof(command_example[0]), 1000);
+
+	  if (transmission_result == HAL_OK){
+		  HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_0);	// Green LED.
+		  HAL_Delay(1000);
+		  HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_0);
+	  }
+	  else{
+		  HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_14);	// Red LED.
+		  HAL_Delay(1000);
+		  HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_14);
+	  }
+
 	  HAL_Delay(10000);
   }
   /* USER CODE END 3 */
