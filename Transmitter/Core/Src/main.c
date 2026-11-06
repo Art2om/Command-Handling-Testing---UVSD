@@ -103,10 +103,11 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-	  HAL_UART_Transmit(&huart7, command_example,
-			  sizeof(command_example) / sizeof(command_example[0]), 1000);
-	  HAL_Delay(10000);
+
     /* USER CODE BEGIN 3 */
+	  HAL_UART_Transmit(&huart7, command_example,
+	  			  sizeof(command_example) / sizeof(command_example[0]), 1000);
+	  HAL_Delay(10000);
   }
   /* USER CODE END 3 */
 }
